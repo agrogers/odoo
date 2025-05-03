@@ -25,6 +25,7 @@ export class SelectCreateDialog extends Component {
         dynamicFilters: { type: Array, optional: true },
         resModel: String,
         searchViewId: { type: [Number, { value: false }], optional: true },
+        viewId: { type: [Number, { value: false }], optional: true },
         multiSelect: { type: Boolean, optional: true },
         onSelected: { type: Function, optional: true },
         close: { type: Function, optional: true },
@@ -38,6 +39,7 @@ export class SelectCreateDialog extends Component {
         dynamicFilters: [],
         multiSelect: true,
         searchViewId: false,
+        viewId: false,
         domain: [],
         context: {},
     };
@@ -71,6 +73,7 @@ export class SelectCreateDialog extends Component {
             dynamicFilters: this.props.dynamicFilters,
             resModel: this.props.resModel,
             searchViewId: this.props.searchViewId,
+            viewId: this.props.viewId,
             type,
         };
         if (type === "list") {
